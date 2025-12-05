@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://scholar.google.com.hk/citations?hl=zh-CN" | append: site.repository | append: "@" %}
+{% assign gsDataBaseUrl = "https://scholar.google.com/citations?hl=zh-TW&user=9nKfGH0AAAAJ" | append: site.repository | append: "@" %}
 {% else %}
 {% assign gsDataBaseUrl = "https://github.com/ShaunMa01" | append: site.repository | append: "/" %}
 {% endif %}
