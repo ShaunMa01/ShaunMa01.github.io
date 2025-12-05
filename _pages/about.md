@@ -1,56 +1,214 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Xiang Ma"
+excerpt: "Postdoctoral Fellow at Shandong University"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+{% if site.google_scholar_stats_use_cdn %}
+{% assign gsDataBaseUrl = "https://scholar.google.com.hk/citations?hl=zh-CN" | append: site.repository | append: "@" %}
+{% else %}
+{% assign gsDataBaseUrl = "https://github.com/ShaunMa01" | append: site.repository | append: "/" %}
+{% endif %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+<span class='anchor' id='about-me'></span>
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+# 😄 About me
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+I am currently a Postdoc at the school of Software, Shandong University, supervised by [Prof.Lizhen Cui](https://faculty.sdu.edu.cn/cuilizhen/en/index.htm). Previously, I received my doctoral degree from School of Software, Shandong University, under the supervision of [Prof.Caiming Zhang](https://www.sc.sdu.edu.cn/info/1046/2286.htm).
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+My research interests mainly include time series analysis and multimodal information fusion. The central aim of my research is to capture the dynamics of our ever-changing world through rigorous scientific inquiry and to bridge the gap between fundamental theory and practical implementation.
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+## Education
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+Ph.D. in Software Engineering, 2020-2024
+School of Software, Shandong University
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+Master in Computer Science and Technology, 2017-2020
+School of Computer Science and Technology, Shandong University
 
-**Markdown generator**
+Bachelor in Computer Science and Technology, 2013-2017
+School of Computer Science and Technology, China University of Geosciences, Wuhan
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+# 🔥 News
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+- **2025.11**: &nbsp;🎉🎉 Two papers are accepted by **AAAI 2026**. (1 Oral & 1 Poster)
+- **2025.11**: One paper is accepted by **ESWA**. Congrats to Pengcheng Wang.
+- **2025.11**: One paper is accepted by **ESWA**. Congrats to [Taihua Chen](https://openreview.net/profile?id=%7ETaihua_Chen1).
+- **2025.08**: &nbsp;🎉🎉 Won the CCF CAD/CG 2025 Best Poster Award.
+- **2025.07**: One paper is accepted by **ACM MM 2025**.
+- **2025.07**: &nbsp;🎉🎉 Received funding by the Postdoctoral Fellowship Program of CPSF.
+- **2025.02**: One paper is accepted by **CVPR 2025**. Congrats to [Lexin Fang](https://shaunma01.github.io/xiangma.github.io/).
+- **2025.02**: One paper is accepted by **PR**. Congrats to [Tianlong Zhao](https://scholar.google.com/citations?user=9RhnDboAAAAJ).
+- **2025.01**: One paper is accepted by **NN**. Congrats to Guangpo Tian.
+- **2024.10**: One paper is accepted by **ACM MM 2024**.
+- **2024.10**: &nbsp;🎉🎉 Awarded the PhD degree in Engineering.
+- **2024.03**: One paper is accepted by **AAAI 2024**.
+- **2024.03**: &nbsp;🎉🎉 Rated as the Outstanding Graduate of Shandong University.
+- **2023.08**: One paper is accepted by **Information Processing & Management**.
+- **2022.09**: One paper is accepted by **INS**.
+- **2021.05**: One paper is accepted by **CVM**.
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+# ✨ Funding
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+- Postdoctoral Fellowship Program of CPSF.
+- Quantitative analysis and modeling of financial big data (horizontal funding)
+
+# 📝 Publications 
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">AAAI 2026</div>
+      <img src="../images/recast.png" alt="AAAI 2026" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+[ReCast: Reliability-aware Codebook assisted Lightweight Time Series Forecasting](https://arxiv.org/abs/2511.11991)  
+**Xiang Ma**, Taihua Chen, Pengcheng Wang, Xuemei Li, Caiming Zhang
+In *Proceedings of The Fortieth AAAI Conference on Artificial Intelligence (**AAAI-26**)*, 2025. (Oral)
+
+  </div>
+</div>
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">AAAI 2026</div>
+      <img src="../images/align.png" alt="AAAI 2026" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+Aligning the True Semantics: Constrained Decoupling and Distribution Sampling for Cross-Modal Alignment
+**Xiang Ma**, Lexin Fang, Litian Xu, Caiming Zhang  
+In *Proceedings of The 40th AAAI Conference on Artificial Intelligence (**AAAI-26**)*, 2025.
+
+  </div>
+</div>
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">MM 2025</div>
+      <img src="../images/pico.png" alt="MM 2025" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+[Reliable Cross-modal Alignment via Prototype Iterative Construction](https://arxiv.org/abs/2510.11175)  
+**Xiang Ma**, Litian Xu, Lexin Fang, Caiming Zhang, Lizhen Cui 
+In *Proceedings of The 33rd ACM International Conferenceon Multimedia (**MM-25**)*, 2025.
+
+  </div>
+</div>
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">MM 2024</div>
+      <img src="../images/dias.png" alt="MM 2024" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+[Bridging the Modality Gap: Dimension Information Alignment and Sparse Spatial Constraint for Image-Text Matching](https://arxiv.org/abs/2410.16853)  
+**Xiang Ma**, Xuemei Li, Lexin Fang, Caiming Zhang 
+In *Proceedings of The 32nd ACM International Conferenceon Multimedia (**MM-24**)*, 2024.
+
+  </div>
+</div>
+
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">AAAI 2024</div>
+      <img src="../images/umixer.png" alt="AAAI 2024" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+[U-Mixer: An Unet-Mixer Architecture with Stationarity Correction for Time Series Forecasting](https://arxiv.org/abs/2401.02236)  
+**Xiang Ma**, Xuemei Li, Lexin Fang, Tianlong Zhao, Caiming Zhang
+In *Proceedings of The 38th AAAI Conference on Artificial Intelligence (**AAAI-24**)*, 2024.
+
+  </div>
+</div>
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">IPM</div>
+      <img src="../images/ipm.png" alt="IPM" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+[Dynamic graph construction via motif detection for stock prediction](https://www.sciencedirect.com/science/article/pii/S0306457323002170)  
+**Xiang Ma**, Xuemei Li, Wenzhi Feng, Lexin Fang, Caiming Zhang
+*Information Processing & Management (**IPM**)*, 2023.
+
+  </div>
+</div>
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">INS</div>
+      <img src="../images/ins.png" alt="INS" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+[Fuzzy hypergraph network for recommending Top-K profitable stocks](https://www.sciencedirect.com/science/article/pii/S0020025522010556)  
+**Xiang Ma**, Tianlong Zhao, Qiang Guo, Xuemei Li, Caiming Zhang
+*Information Sciences (**INS**)*, 2022.
+
+  </div>
+</div>
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">CVM</div>
+      <img src="../images/cvm.jpg" alt="CVM" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+[Image smoothing based on global sparsity decomposition and a variable parameter](https://link.springer.com/article/10.1007/s41095-021-0220-1)  
+**Xiang Ma**, Xuemei Li, Yuanfeng Zhou, Caiming Zhang
+*Computational Visual Media (**CVM**)*, 2021.
+
+  </div>
+</div>
+  
+# 🎖 Honors and Awards
+- **2025.08**: The CCF CAD/CG 2025 Best Poster Award.
+- **2024.03**: The Outstanding Graduate of Shandong University.
+
+# ✨ Academic Service
+- The Annual AAAI Conference on Artificial Intelligence 2026 (AAAI'26), PC Member.
+- IEEE Transactions on Neural Networks and Learning Systems (TNNLS), Reviewer.
+- Applied Soft Computing, Reviewer.
+  
+# 🌐 Contact
+
+- **Email**: &nbsp; xiangma@sdu.edu.cn
+
+<p style="text-align:center;">
+  <a href="https://mapmyvisitors.com/web/1bzjx" title="Visit tracker">
+    <img
+      src="https://mapmyvisitors.com/map.png?d=ukjh0Z-uzU34T0OaMSYlqHzSEU-IlWN-FW0wGRYXNn8&cl=ffffff"
+      alt="Visitor Map"
+      style="max-width:100%; height:auto;"
+    >
+  </a>
+</p>
+
