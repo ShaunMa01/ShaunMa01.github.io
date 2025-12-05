@@ -22,7 +22,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Xiang Ma (马翔)"
-  avatar           : "../images/xjpic-白(1)(1).png"
+  avatar           : "../images/xjpic.png"
   bio              : "Shandong University"
   location         : "Shandong, China"
   employer         :
