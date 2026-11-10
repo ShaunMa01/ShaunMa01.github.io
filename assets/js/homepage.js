@@ -38,7 +38,7 @@ newsToggle.addEventListener('click', () => {
   const expanded = newsToggle.getAttribute('aria-expanded') !== 'true';
   newsToggle.setAttribute('aria-expanded', String(expanded));
   olderNews.hidden = !expanded;
-  newsToggle.textContent = expanded ? 'Show Less ↑' : 'View All →';
+  newsToggle.textContent = expanded ? '收起 ↑' : '查看全部 →';
 });
 
 document.querySelectorAll('.image-toggle').forEach((toggle) => {
