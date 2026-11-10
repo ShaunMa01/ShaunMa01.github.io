@@ -1,0 +1,31 @@
+name: Validate homepage
+
+on:
+  pull_request:
+    paths:
+      - '_pages/about.*'
+      - 'assets/css/homepage.css'
+      - 'assets/js/homepage.js'
+      - '_config.yml'
+      - '.github/workflows/validate-homepage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with the GitHub Pages Jekyll environment
+        uses: actions/jekyll-build-pages@v1
+      - name: Check homepage output and JavaScript
+        run: |
+          node --check assets/js/homepage.js
+          test -f _site/index.html
+          test -f _site/assets/css/homepage.css
+          test -f _site/assets/js/homepage.js
+          grep -q 'class="profile-column"' _site/index.html
+          grep -q 'id="-publications"' _site/index.html
+          test -f _site/about/index.html
